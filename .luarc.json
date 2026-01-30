@@ -1,6 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
-  "workspace.library": ["./REFrameworkLuaTypedef/dist/"],
-  "runtime.version": "Lua 5.3",
+  "workspace": {
+    "library": ["./REFrameworkLuaTypedef/dist/"],
+    "ignoreDir": ["./examples/reframework/autorun/mdk/"]
+  },
+  "runtime.version": "Lua 5.4",
   "hint.enable": true
 }
