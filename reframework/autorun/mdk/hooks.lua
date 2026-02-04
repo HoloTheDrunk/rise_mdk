@@ -1,3 +1,6 @@
+---@module "Monster"
+---@module "HitInfo"
+
 ---@class Hook
 ---@field public typedef string
 ---@field public method string
@@ -5,21 +8,17 @@
 local hooks = {
   player = {
     ---Fired when a player is created in a quest.
-    ---Callback parameter parsing:
-    ---```lua
-    ---local playerObject = QuestPlayer.new(args[2])
-    ---````
+    ---Callback args:
+    --- 1: unknown
+    --- 2: [QuestPlayer]
     init = { typedef = "snow.player.PlayerQuestBase", method = "start" },
   },
   enemy = {
     ---Fired when an enemy (monster) takes damage.
-    ---Callback parameter parsing:
-    ---```lua
-    ---local monster = Monster.new(args[2])
-    ---local hitinfo = HitInfo.new(args[3])
-    ---```
-    ---@see Monster
-    ---@see HitInfo
+    ---Callback args:
+    --- 1: unknown
+    --- 2: [Monster]
+    --- 3: [HitInfo]
     stockDamage = { typedef = "snow.enemy.EnemyCharacterBase", method = "stockDamage" },
   }
 };
