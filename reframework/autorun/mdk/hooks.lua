@@ -12,6 +12,11 @@ local hooks = {
     --- 1: unknown
     --- 2: [QuestPlayer]
     init = { typedef = "snow.player.PlayerQuestBase", method = "start" },
+    ---Fired once every frame on all players.
+    ---Callback args:
+    --- 1: unknown
+    --- 2: [QuestPlayer]
+    update = { typedef = "snow.player.PlayerQuestBase", method = "update" },
   },
   enemy = {
     ---Fired when an enemy (monster) takes damage.
