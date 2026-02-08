@@ -14,4 +14,6 @@ HitInfoRemo = {}
 ---@overload fun(self, method: "set_PhysicalPartsBreakVitalDamage", value: number): nil
 ---@overload fun(self, method: "get_AttackerID"): integer
 ---@overload fun(self, method: "get_AttackerType"): integer
+---@overload fun(self, method: "get_Position"): Vector3f
+---@overload fun(self, method: "get_DamageShapeFollowJoints"): JointListRemo
 function HitInfoRemo:call(method, ...) end

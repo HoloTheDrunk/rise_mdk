@@ -25,3 +25,5 @@ end
 function LobbyManager:get_own_player_index()
   return self._remo:get_field("_myselfQuestIndex")
 end
+
+return LobbyManager
