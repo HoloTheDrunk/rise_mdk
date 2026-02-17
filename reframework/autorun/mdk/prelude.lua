@@ -11,5 +11,6 @@ return {
   --
   hooks = hooks.hooks,
   attach_hook = hooks.attach_hook,
-  utils = require("utils")
+  utils = require("utils"),
+  motions = require("motions"),
 }

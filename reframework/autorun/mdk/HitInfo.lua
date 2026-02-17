@@ -70,7 +70,7 @@ function HitInfo:get_joint_list()
   return JointList.new(self._remo:call("get_DamageShapeFollowJoints"))
 end
 
----@return { pos: Vector3f, joint: unknown | nil }
+---@return { pos: Vector3f, joint: Joint | nil }
 function HitInfo:get_detailed_position()
   local hit_pos = self:get_world_position()
 

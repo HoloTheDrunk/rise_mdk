@@ -11,7 +11,7 @@ local hooks = {
     ---Callback args:
     --- 1: unknown
     --- 2: [QuestPlayer]
-    init = { typedef = "snow.player.PlayerQuestBase", method = "start" },
+    start = { typedef = "snow.player.PlayerQuestBase", method = "start" },
     ---Fired once every frame on all players.
     ---Callback args:
     --- 1: unknown
