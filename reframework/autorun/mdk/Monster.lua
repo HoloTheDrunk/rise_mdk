@@ -1,5 +1,3 @@
----@module "MonsterRemo.d.lua
-
 ---@class Monster
 ---@field protected _remo MonsterRemo Reference to the engine-side object.
 ---@field protected _cache table<string, unknown> Cache for reference properties. Saves engine look-ups.

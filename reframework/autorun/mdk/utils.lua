@@ -1,4 +1,4 @@
-local LobbyManager = require("LobbyManager")
+local LobbyManager = require("mdk.LobbyManager")
 
 ---@param player QuestPlayer
 ---@return boolean

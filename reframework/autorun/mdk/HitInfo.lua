@@ -1,4 +1,4 @@
-local JointList = require("JointList")
+local JointList = require("mdk.JointList")
 
 ---@class HitInfo
 ---@field private _remo HitInfoRemo Reference to the engine-side object.

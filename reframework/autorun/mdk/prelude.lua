@@ -1,16 +1,16 @@
-local hooks = require("hooks")
+local hooks = require("mdk.hooks")
 
 return {
-  LobbyManager = require("LobbyManager"),
+  LobbyManager = require("mdk.LobbyManager"),
   --
-  QuestPlayer = require("QuestPlayer"),
-  Monster = require("Monster"),
-  HitInfo = require("HitInfo"),
-  Joint = require("Joint"),
-  JointList = require("JointList"),
+  QuestPlayer = require("mdk.QuestPlayer"),
+  Monster = require("mdk.Monster"),
+  HitInfo = require("mdk.HitInfo"),
+  Joint = require("mdk.Joint"),
+  JointList = require("mdk.JointList"),
   --
   hooks = hooks.hooks,
   attach_hook = hooks.attach_hook,
-  utils = require("utils"),
-  motions = require("motions"),
+  utils = require("mdk.utils"),
+  motions = require("mdk.motions"),
 }
