@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class JointRemo : REManagedObject
+---Corresponds to [via.Joint].
 JointRemo = {}
 
 ---@param method string Name of the function

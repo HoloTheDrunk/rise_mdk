@@ -6,11 +6,9 @@ Joint.__index = Joint
 ---@param value integer | REManagedObject | userdata
 ---@return Joint
 function Joint.new(value)
-  ---@type Joint
-  local res = {
+  return setmetatable({
     _remo = sdk.to_managed_object(value) --[[@as JointRemo]]
-  }
-  return res
+  }, Joint)
 end
 
 ---@return boolean

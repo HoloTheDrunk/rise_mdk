@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class JointListRemo : REManagedObject
+---Corresponds to [System.Collections.ObjectModel.ReadOnlyCollection`1<via.Joint>]
 JointListRemo = {}
 
 ---@param method string Name of the function

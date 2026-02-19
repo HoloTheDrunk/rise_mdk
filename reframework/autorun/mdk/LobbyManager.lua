@@ -1,5 +1,5 @@
 ---@class LobbyManager
----@field private _remo LobbyManagerRemo Reference to the engine-side object.
+---@field public _remo LobbyManagerRemo Reference to the engine-side object.
 local LobbyManager = {}
 LobbyManager.__index = LobbyManager --[[@as function]]
 
@@ -8,10 +8,11 @@ local _cache = nil
 
 ---@return LobbyManager
 function LobbyManager.new()
-  if _cache == nil then
+  if not _cache then
     _cache = {
       _remo = sdk.get_managed_singleton("snow.LobbyManager") --[[@as LobbyManagerRemo]]
     }
+    setmetatable(_cache, LobbyManager)
   end
   return _cache
 end
