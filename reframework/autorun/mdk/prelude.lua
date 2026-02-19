@@ -10,6 +10,7 @@ return {
   HitInfo = require("mdk.HitInfo"),
   Joint = require("mdk.Joint"),
   JointList = require("mdk.JointList"),
+  Transition = require("mdk.Transition"),
   --
   hooks = hooks.hooks,
   attach_hook = hooks.attach_hook,
