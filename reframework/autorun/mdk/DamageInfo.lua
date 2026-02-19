@@ -53,7 +53,7 @@ end
 
 ---    0: player
 ---other: idk
----@return integer
+---@return DamageAttackerType
 function DamageInfo:get_attacker_type()
   return self._remo:call("get_DamageAttackerType")
 end

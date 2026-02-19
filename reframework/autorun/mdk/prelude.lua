@@ -5,6 +5,7 @@ return {
   --
   QuestPlayer = require("mdk.QuestPlayer"),
   Monster = require("mdk.Monster"),
+  DamageAttackerType = require("mdk.DamageAttackerType"),
   DamageInfo = require("mdk.DamageInfo"),
   HitInfo = require("mdk.HitInfo"),
   Joint = require("mdk.Joint"),

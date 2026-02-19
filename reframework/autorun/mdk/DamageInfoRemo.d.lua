@@ -14,5 +14,5 @@ DamageInfoRemo = {}
 ---@overload fun(self, method: "get_PhysicalPartsBreakVitalDamage"): number
 ---@overload fun(self, method: "set_PhysicalPartsBreakVitalDamage", value: number): nil
 ---@overload fun(self, method: "get_AttackerID"): integer
----@overload fun(self, method: "get_DamageAttackerType"): integer
+---@overload fun(self, method: "get_DamageAttackerType"): DamageAttackerType
 function DamageInfoRemo:call(method, ...) end
