@@ -3,14 +3,12 @@
 local DamageInfo = {}
 DamageInfo.__index = DamageInfo --[[@as function]]
 
+---@param value integer | REManagedObject | userdata
 ---@return DamageInfo
 function DamageInfo.new(value)
-  ---@type DamageInfo
-  local res = {
+  return setmetatable({
     _remo = sdk.to_managed_object(value) --[[@as DamageInfoRemo]]
-  }
-  setmetatable(res, DamageInfo)
-  return res
+  }, DamageInfo) --[[@as DamageInfo]]
 end
 
 ---@return number

@@ -9,7 +9,7 @@ HitInfo.__index = HitInfo --[[@as function]]
 function HitInfo.new(value)
   return setmetatable({
     _remo = sdk.to_managed_object(value) --[[@as HitInfoRemo]]
-  }, HitInfo)
+  }, HitInfo) --[[@as HitInfo]]
 end
 
 ---@return Vector3f

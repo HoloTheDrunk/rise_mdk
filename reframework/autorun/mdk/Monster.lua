@@ -5,16 +5,14 @@
 local Monster = {}
 Monster.__index = Monster --[[@as function]]
 
+---@param value integer | REManagedObject | userdata
 ---@return Monster
 function Monster.new(value)
-  ---@type Monster
-  local res = {
+  return setmetatable({
     _remo = sdk.to_managed_object(value) --[[@as MonsterRemo]],
     _cache = {},
     __index = nil,
-  }
-  setmetatable(res, Monster)
-  return res
+  }, Monster) --[[@as Monster]]
 end
 
 ---@return REManagedObject

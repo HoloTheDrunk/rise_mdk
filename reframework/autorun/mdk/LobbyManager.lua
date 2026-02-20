@@ -9,10 +9,9 @@ local _cache = nil
 ---@return LobbyManager
 function LobbyManager.new()
   if not _cache then
-    _cache = {
+    _cache = setmetatable({
       _remo = sdk.get_managed_singleton("snow.LobbyManager") --[[@as LobbyManagerRemo]]
-    }
-    setmetatable(_cache, LobbyManager)
+    }, LobbyManager) --[[@as LobbyManager]]
   end
   return _cache
 end

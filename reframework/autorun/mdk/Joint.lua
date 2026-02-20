@@ -8,7 +8,7 @@ Joint.__index = Joint
 function Joint.new(value)
   return setmetatable({
     _remo = sdk.to_managed_object(value) --[[@as JointRemo]]
-  }, Joint)
+  }, Joint) --[[@as Joint]]
 end
 
 ---@return boolean

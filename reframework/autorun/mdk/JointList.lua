@@ -5,14 +5,12 @@ local Joint = require("mdk.Joint")
 local JointList = {}
 JointList.__index = JointList
 
+---@param value integer | REManagedObject | userdata
 ---@return JointList
 function JointList.new(value)
-  ---@type JointList
-  local res = {
+  return setmetatable({
     _remo = sdk.to_managed_object(value) --[[@as JointListRemo]],
-  }
-  setmetatable(res, JointList)
-  return res
+  }, JointList) --[[@as JointList]]
 end
 
 ---@return integer
