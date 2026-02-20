@@ -16,6 +16,7 @@ local function ease_out(x) return (1 - x) * (1 - x) end
 ---@param start_time number
 ---@param duration number
 ---@param curve? fun(x: number): number Default ease_in
+---@return Transition
 function Transition.new(start, target, start_time, duration, curve)
   return setmetatable({
     start = start,
@@ -23,15 +24,22 @@ function Transition.new(start, target, start_time, duration, curve)
     start_time = start_time,
     duration = duration,
     curve = curve or ease_in,
-  }, Transition)
+  }, Transition) --[[@as Transition]]
 end
 
----@param t number? Current time
+---@param time number Current time in seconds
 ---@return number current
-function Transition:get(t)
-  local x = ((t or time()) - self.start_time) / self.duration
+function Transition:get(time)
+  local t = math.min(math.max(self.start_time, time), self.start_time + self.duration)
+  local x = (t - self.start_time) / self.duration
   local y = self.curve(x)
   return self.target * y + self.start * (1. - y)
+end
+
+---@param t number Current time in seconds
+---@return boolean
+function Transition:is_done(t)
+  return t > self.start_time + self.duration
 end
 
 return {
