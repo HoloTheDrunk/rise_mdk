@@ -56,6 +56,9 @@ function TransitionManager:add(event, name, transition, func, overwrite)
   if not self.entries[event] then
     self.entries[event] = {}
   end
+  if self.events[event] == nil then
+    self.events[event] = false
+  end
   if self.entries[event][name] ~= nil and not overwrite then
     return false
   end
