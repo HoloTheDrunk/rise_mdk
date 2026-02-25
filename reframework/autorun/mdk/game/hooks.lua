@@ -1,6 +1,3 @@
----@module "Monster"
----@module "HitInfo"
-
 ---@class Hook
 ---@field public typedef string
 ---@field public method string

@@ -4,6 +4,7 @@
     "library": ["./REFrameworkLuaTypedef/dist/"],
     "ignoreDir": ["./examples/reframework/autorun/mdk/"]
   },
+  "diagnostics.groupSeverity.unbalanced": "Error",
   "runtime.version": "Lua 5.4",
   "hint.enable": true
 }

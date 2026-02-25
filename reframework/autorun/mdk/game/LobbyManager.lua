@@ -26,4 +26,14 @@ function LobbyManager:get_own_player_index()
   return self._remo:get_field("_myselfQuestIndex")
 end
 
+---@param player QuestPlayer
+---@return boolean
+function LobbyManager.is_own_player(player)
+  local lobby_manager = LobbyManager.new()
+  if lobby_manager:is_quest_online() and lobby_manager:get_own_player_index() ~= player:get_index() then
+    return false
+  end
+  return true
+end
+
 return LobbyManager

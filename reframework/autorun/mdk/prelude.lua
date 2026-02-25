@@ -1,19 +1,19 @@
-local hooks = require("mdk.hooks")
+local hooks = require("mdk.game.hooks")
 
 return {
-  LobbyManager = require("mdk.LobbyManager"),
+  LobbyManager = require("mdk.game.LobbyManager"),
   --
-  QuestPlayer = require("mdk.QuestPlayer"),
-  Monster = require("mdk.Monster"),
-  DamageAttackerType = require("mdk.DamageAttackerType"),
-  DamageInfo = require("mdk.DamageInfo"),
-  HitInfo = require("mdk.HitInfo"),
-  Joint = require("mdk.Joint"),
-  JointList = require("mdk.JointList"),
-  Transition = require("mdk.Transition"),
-  --
+  QuestPlayer = require("mdk.game.QuestPlayer"),
+  Monster = require("mdk.game.Monster"),
+  DamageAttackerType = require("mdk.game.DamageAttackerType"),
+  DamageInfo = require("mdk.game.DamageInfo"),
+  HitInfo = require("mdk.game.HitInfo"),
+  Joint = require("mdk.game.Joint"),
+  JointList = require("mdk.game.JointList"),
   hooks = hooks.hooks,
   attach_hook = hooks.attach_hook,
-  utils = require("mdk.utils"),
-  motions = require("mdk.motions"),
+  motions = require("mdk.game.motions"),
+  --
+  Transition = require("mdk.utils.Transition"),
+  TransitionManager = require("mdk.utils.TransitionManager"),
 }

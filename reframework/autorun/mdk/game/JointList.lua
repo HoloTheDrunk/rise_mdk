@@ -1,4 +1,4 @@
-local Joint = require("mdk.Joint")
+local Joint = require("mdk.game.Joint")
 
 ---@class JointList
 ---@field public _remo JointListRemo

@@ -1,4 +1,4 @@
-local JointList = require("mdk.JointList")
+local JointList = require("mdk.game.JointList")
 
 ---@class HitInfo
 ---@field public _remo HitInfoRemo Reference to the engine-side object.
