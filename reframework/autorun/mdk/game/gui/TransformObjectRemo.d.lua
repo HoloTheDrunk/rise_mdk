@@ -1,16 +1,16 @@
 ---@meta
 
----@class PanelRemo : TransformObjectRemo
----Corresponds to [via.gui.Panel].
-PanelRemo = {}
+---@class TransformObjectRemo : PlayObjectRemo
+---Corresponds to [via.gui.TransformObject].
+TransformObjectRemo = {}
 
 ---@param name string
 ---@param ... unknown
 ---@return unknown
 ---@overload fun(self, name: "get_Next"): PlayObjectRemo
 ---@overload fun(self, name: "get_Child"): PlayObjectRemo
-function PanelRemo:call(name, ...) end
+function TransformObjectRemo:call(name, ...) end
 
 ---@param field string Name of the field
 ---@return unknown
-function PanelRemo:get_field(field) end
+function TransformObjectRemo:get_field(field) end

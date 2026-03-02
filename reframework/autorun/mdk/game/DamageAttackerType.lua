@@ -41,7 +41,7 @@ local types = {
   invalid = 36,
 }
 
----@param id DamageAttackerType
+---@param attacker_type DamageAttackerType
 ---@return string?
 local function name_from_id(attacker_type)
   for name, id in pairs(types) do

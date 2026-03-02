@@ -16,4 +16,8 @@ function GuiManager.new()
   return _cache
 end
 
+function GuiManager:get_weapon_hud()
+  return self._remo:get_field("guiHudWeaponUIObject")
+end
+
 return GuiManager

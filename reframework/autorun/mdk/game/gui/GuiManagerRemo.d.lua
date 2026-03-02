@@ -10,4 +10,5 @@ function GuiManagerRemo:call(method, ...) end
 
 ---@param field string Name of the field
 ---@return unknown
+---@overload fun(self, field: "guiHudWeaponUIObject"): unknown
 function GuiManagerRemo:get_field(field) end
