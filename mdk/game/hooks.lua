@@ -6,19 +6,26 @@ local hooks = {
   player = {
     ---Fired when a player is created in a quest.
     ---Callback args:
-    --- 1: unknown
     --- 2: [QuestPlayer]
     start = { typedef = "snow.player.PlayerQuestBase", method = "start" },
     ---Fired once every frame on all players.
     ---Callback args:
-    --- 1: unknown
     --- 2: [QuestPlayer]
     update = { typedef = "snow.player.PlayerQuestBase", method = "update" },
+    ---Fired when the game tries to determine how much hitstop to apply.
+    ---Callback args:
+    --- 2: [LongSword|Hammer|etc...]
+    --- 3: [GameObject]
+    updateHitStop = { typedef = "snow.player.PlayerQuestBase", method = "updateHitStop" },
+    motion_control = {
+      ---Fired after at the end of a frame, after the scene has been rendered.
+      ---No args
+      late_update = { typedef = "snow.player.PlayerMotionControl", method = "lateUpdate" }
+    },
   },
   enemy = {
     ---Fired when an enemy (monster) takes damage.
     ---Callback args:
-    --- 1: unknown
     --- 2: [Monster]
     --- 3: [HitInfo]
     stockDamage = { typedef = "snow.enemy.EnemyCharacterBase", method = "stockDamage" },

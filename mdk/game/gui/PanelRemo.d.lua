@@ -4,13 +4,6 @@
 ---Corresponds to [via.gui.Panel].
 PanelRemo = {}
 
----@param name string
----@param ... unknown
----@return unknown
----@overload fun(self, name: "get_Next"): PlayObjectRemo
----@overload fun(self, name: "get_Child"): PlayObjectRemo
-function PanelRemo:call(name, ...) end
+PanelRemo.call = TransformObjectRemo.call
 
----@param field string Name of the field
----@return unknown
-function PanelRemo:get_field(field) end
+PanelRemo.get_field = TransformObjectRemo.get_field

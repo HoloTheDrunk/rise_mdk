@@ -73,3 +73,5 @@ function TransitionManager:remove(event, name)
   self.entries[event][name] = nil
   return res
 end
+
+return TransitionManager

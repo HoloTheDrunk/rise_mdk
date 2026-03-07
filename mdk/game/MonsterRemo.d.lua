@@ -3,7 +3,7 @@
 ---@class MonsterRemo : REManagedObject
 MonsterRemo = {}
 
----@param name string
+---@param field string
 ---@return unknown
----@overload fun(self, name: "<DamageParam>k__BackingField"): REManagedObject
-function MonsterRemo:get_field(name) end
+---@overload fun(self, field: "<DamageParam>k__BackingField"): REManagedObject
+function MonsterRemo:get_field(field) end

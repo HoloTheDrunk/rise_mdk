@@ -53,3 +53,5 @@ function StateManager:as(state)
   end
   return nil
 end
+
+return StateManager

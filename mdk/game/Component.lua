@@ -1,5 +1,3 @@
-local GameObject = require("mdk.game.GameObject")
-
 ---@class Component
 ---@field public _remo ComponentRemo Reference to the engine-side object.
 local Component = {}
@@ -15,7 +13,7 @@ end
 
 ---@return GameObject
 function Component:get_game_object()
-  return GameObject.new(self._remo:call("get_GameObject"))
+  return require("mdk.game.GameObject").new(self._remo:call("get_GameObject"))
 end
 
 return Component
