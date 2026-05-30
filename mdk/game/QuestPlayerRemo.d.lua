@@ -8,6 +8,7 @@ QuestPlayerRemo = {}
 ---@param ... unknown Any arguments to be passed to the function
 ---@return unknown
 ---@overload fun(self, method: "get_PlayerData"): PlayerDataRemo
+---@overload fun(self, method: "setEquipSkill223Shell"): nil
 function PlayerDataRemo:call(method, ...) end
 
 ---@param field string

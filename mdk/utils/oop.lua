@@ -3,7 +3,7 @@
 ---@return table child The child table with its __index modified
 local function inherit(child, parent)
   child.__index = function(tbl, key)
-    local own = rawget(tbl, key)
+    local own = rawget(tbl, key) or getmetatable(tbl)[key]
     if own ~= nil then return own end
     return parent[key]
   end

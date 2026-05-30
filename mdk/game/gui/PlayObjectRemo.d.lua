@@ -7,7 +7,7 @@ PlayObjectRemo = {}
 ---@param name string
 ---@param ... unknown
 ---@return unknown
----@overload fun(self, name: "get_Next"): PlayObjectRemo
+---@overload fun(self, name: "get_Next"): PlayObjectRemo | TransformObjectRemo
 function PlayObjectRemo:call(name, ...) end
 
 ---@param field string Name of the field

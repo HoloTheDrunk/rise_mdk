@@ -5,6 +5,7 @@
 ---@field get_next fun(self: self): State | nil
 ---@field get_name fun(self: self): string
 ---@field draw_ui fun(self: self): nil
+---@field draw_hud fun(self: self): nil
 
 ---@class StateManager
 ---@field public state State
