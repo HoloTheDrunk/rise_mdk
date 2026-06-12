@@ -1,17 +1,12 @@
 ---@meta
 
----@class QuestPlayerRemo : REManagedObject
+---@class QuestPlayerRemo : ComponentRemo
 ---Corresponds to [snow.player.PlayerQuestBase]
 QuestPlayerRemo = {}
 
----@param method string Name of the function
----@param ... unknown Any arguments to be passed to the function
----@return unknown
 ---@overload fun(self, method: "get_PlayerData"): PlayerDataRemo
 ---@overload fun(self, method: "setEquipSkill223Shell"): nil
-function PlayerDataRemo:call(method, ...) end
+QuestPlayerRemo.call = ComponentRemo.call
 
----@param field string
----@return unknown
 ---@overload fun(self, field: "_PlayerIndex"): integer
-function QuestPlayerRemo:get_field(field) end
+QuestPlayerRemo.get_field = ComponentRemo.get_field

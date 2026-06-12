@@ -16,4 +16,5 @@ return {
   time = require("mdk.game.time"),
   --Submodules
   gui = require("mdk.game.gui._mod"),
+  weapons = require("mdk.game.weapons._mod"),
 }
